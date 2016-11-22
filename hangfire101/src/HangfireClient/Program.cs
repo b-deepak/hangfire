@@ -26,6 +26,7 @@ namespace HangfireClient
             //Queue Job
             //BackgroundJob.Enqueue(() => Console.WriteLine("Hello, world!"));
             BackgroundJob.Enqueue<TopicReceiver>(receiver => receiver.SubscribeAsync());
+            //RecurringJob.AddOrUpdate<TopicReceiver>(receiver => receiver.SubscribeAsync(), Cron.MinuteInterval(1));
 
             //var client = new BackgroundJobClient();
             //client.Enqueue<TopicReceiver>(receiver => receiver.SubscribeAsync());

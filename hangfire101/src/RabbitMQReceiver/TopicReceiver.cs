@@ -14,46 +14,48 @@ namespace RabbitMQReceiver
         public TopicReceiver()
         { }
 
-        public async Task<string> SubscribeAsync()
+        //public async Task<string> SubscribeAsync()
+        public async Task SubscribeAsync()
         {
-            return await Task.Run<string>(() =>
+            //return await Task.Run(() =>
+            await Task.Run(() =>
             {
-                var factory = new ConnectionFactory();
-                factory.UserName = "guest";
-                factory.Password = "guest";
-                factory.VirtualHost = "/";
-                factory.HostName = "52.175.209.90";
-                factory.Port = 5672;
-
-                using (var connection = factory.CreateConnection())
+                try
                 {
-                    Debug.WriteLine("RabbitMQ Broker Connection Established.");
-                    using (var channel = connection.CreateModel())
+                    var factory = new ConnectionFactory();
+                    factory.UserName = "guest";
+                    factory.Password = "guest";
+                    factory.VirtualHost = "/";
+                    factory.HostName = "52.175.209.90";
+                    factory.Port = 5672;
+
+                    using (var connection = factory.CreateConnection())
                     {
-                        channel.ExchangeDeclare(
-                            exchange: "orders-exchange",
-                            type: "topic",
-                            durable: true,
-                            autoDelete: false,
-                            arguments: null);
+                        Debug.WriteLine("RabbitMQ Broker Connection Established.");
+                        using (var channel = connection.CreateModel())
+                        {
+                            channel.ExchangeDeclare(
+                                exchange: "orders-exchange",
+                                type: "topic",
+                                durable: true,
+                                autoDelete: false,
+                                arguments: null);
 
-                        var queueName = "order-created";//channel.QueueDeclare().QueueName;
-                        var routingKey = "orders.created";
+                            var queueName = "order-created";//channel.QueueDeclare().QueueName;
+                            var routingKey = "orders.created";
 
-                        Debug.WriteLine("Queue Name:" + queueName);
+                            Debug.WriteLine("Queue Name:" + queueName);
 
-                        channel.QueueBind(
-                            exchange: "orders-exchange",
-                            queue: queueName,
-                            routingKey: routingKey);
+                            channel.QueueBind(
+                                exchange: "orders-exchange",
+                                queue: queueName,
+                                routingKey: routingKey);
 
-                        Debug.WriteLine("Queue Bound:" + queueName);
+                            Debug.WriteLine("Queue Bound:" + queueName);
 
-                        var message = string.Empty;
-                        var consumer = new EventingBasicConsumer(channel);
+                            var message = string.Empty;
+                            var consumer = new EventingBasicConsumer(channel);
 
-                        //while (true)
-                        //{
                             consumer.Received += (model, ea) =>
                             {
                                 var body = ea.Body;
@@ -66,12 +68,19 @@ namespace RabbitMQReceiver
                                 noAck: true,
                                 consumer: consumer);
 
-                            return message;
-                        //}
+                            //run forever
+                            Debug.WriteLine("Listening for messages...");
+                            while (true)
+                            { }
+                        }
                     }
                 }
-
+                catch(Exception ex)
+                {
+                    Debug.WriteLine("Exception Occurred:" + ex.ToString());
+                }
             }).ConfigureAwait(false);
         }
+
     }
 }

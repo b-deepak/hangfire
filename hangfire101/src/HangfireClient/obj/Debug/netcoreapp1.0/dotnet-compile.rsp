@@ -1,5 +1,5 @@
---temp-output:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\HangfireClient\obj\Debug\netcoreapp1.0\
---out:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\HangfireClient\bin\Debug\netcoreapp1.0\HangfireClient.dll
+--temp-output:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\HangfireClient\obj\Debug\netcoreapp1.0\
+--out:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\HangfireClient\bin\Debug\netcoreapp1.0\HangfireClient.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -121,6 +121,6 @@
 --reference:C:\Users\dbhardwaj\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\dbhardwaj\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\dbhardwaj\.nuget\packages\System.Xml.XmlDocument\4.0.1\ref\netstandard1.3\System.Xml.XmlDocument.dll
---reference:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\RabbitMQReceiver\bin\Debug\netstandard1.6\RabbitMQReceiver.dll
-C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\HangfireClient\Program.cs
-C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\HangfireClient\Properties\AssemblyInfo.cs
+--reference:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\RabbitMQReceiver\bin\Debug\netstandard1.6\RabbitMQReceiver.dll
+C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\HangfireClient\Program.cs
+C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\HangfireClient\Properties\AssemblyInfo.cs

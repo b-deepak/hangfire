@@ -1,5 +1,5 @@
---temp-output:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\RabbitMQReceiver\obj\Debug\netstandard1.6\
---out:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\RabbitMQReceiver\bin\Debug\netstandard1.6\RabbitMQReceiver.dll
+--temp-output:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\RabbitMQReceiver\obj\Debug\netstandard1.6\
+--out:C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\RabbitMQReceiver\bin\Debug\netstandard1.6\RabbitMQReceiver.dll
 --define:DEBUG
 --define:TRACE
 --define:NETSTANDARD1_6
@@ -61,5 +61,5 @@
 --reference:C:\Users\dbhardwaj\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\dbhardwaj\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\dbhardwaj\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
-C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\RabbitMQReceiver\TopicReceiver.cs
-C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\ConsoleApp1\src\RabbitMQReceiver\Properties\AssemblyInfo.cs
+C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\RabbitMQReceiver\TopicReceiver.cs
+C:\Users\dbhardwaj\Documents\Learnings\git-repos\hangfire\hangfire101\src\RabbitMQReceiver\Properties\AssemblyInfo.cs
