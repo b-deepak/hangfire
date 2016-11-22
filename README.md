@@ -14,6 +14,6 @@ Helper library that uses RabbitMQ.NET Client libraries for subscribing to a topi
 
 # References
 
-[Hangfire.io Documentation](http://docs.hangfire.io/en/latest/index.html "Hangfire")
-[Background Tasks with hangfire.io] http://codeopinion.com/background-tasks/
+* [Hangfire.io Documentation](http://docs.hangfire.io/en/latest/index.html "Hangfire")
+* [Background Tasks with hangfire.io](http://codeopinion.com/background-tasks/ "Background Tasks Example")
 
