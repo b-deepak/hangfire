@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F04A17AB-A47B-4CD7-8E5C-DAFC8301EF04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C565B1B-3EA5-4A6A-8223-D167E35DD0FB}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HangfireServer", "src\HangfireServer\HangfireServer.xproj", "{0DE2AF82-666D-476E-BEB7-CCD1ACC8BD77}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RabbitMQReceiver", "src\RabbitMQReceiver\RabbitMQReceiver.xproj", "{7DF545D6-F6E8-40A1-9202-A379E4384882}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "HangfireClient", "src\HangfireClient\HangfireClient.xproj", "{A748BF30-B923-4994-8C0B-ABE0503C037C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{F2FFC320-26F8-447F-9C86-3B482E8FD575}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0DE2AF82-666D-476E-BEB7-CCD1ACC8BD77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE2AF82-666D-476E-BEB7-CCD1ACC8BD77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE2AF82-666D-476E-BEB7-CCD1ACC8BD77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE2AF82-666D-476E-BEB7-CCD1ACC8BD77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DF545D6-F6E8-40A1-9202-A379E4384882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF545D6-F6E8-40A1-9202-A379E4384882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DF545D6-F6E8-40A1-9202-A379E4384882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF545D6-F6E8-40A1-9202-A379E4384882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A748BF30-B923-4994-8C0B-ABE0503C037C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A748BF30-B923-4994-8C0B-ABE0503C037C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A748BF30-B923-4994-8C0B-ABE0503C037C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A748BF30-B923-4994-8C0B-ABE0503C037C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0DE2AF82-666D-476E-BEB7-CCD1ACC8BD77} = {F04A17AB-A47B-4CD7-8E5C-DAFC8301EF04}
+		{7DF545D6-F6E8-40A1-9202-A379E4384882} = {F2FFC320-26F8-447F-9C86-3B482E8FD575}
+		{A748BF30-B923-4994-8C0B-ABE0503C037C} = {F04A17AB-A47B-4CD7-8E5C-DAFC8301EF04}
+		{F2FFC320-26F8-447F-9C86-3B482E8FD575} = {F04A17AB-A47B-4CD7-8E5C-DAFC8301EF04}
+	EndGlobalSection
+EndGlobal
