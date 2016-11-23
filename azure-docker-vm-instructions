@@ -1,0 +1,36 @@
+Create rabbit vm using Docker's RabbitMQ marketplace compute app
+
+Now select the rabbitmq vm
+
+Then follow instructions here: https://hub.docker.com/_/rabbitmq/
+
+- I just ran the following step 
+	------ ORIGINAL ------ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 rabbitmq:3-management
+	docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672 -p 5671:5671 rabbitmq:3-management
+
+- Now test access to rabbitm mgmt plugin from host. To get IP address of container, see 'docker stuff' below.
+	curl http://IP-ADDRESS-OF-CONTAINER:15672/
+
+- To access from outside world, you need to add a 'Network Security Group' for port 8080 in same resource group as rabbit vm.
+	See here - (ignore subnet section of article) - https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-nsg-quickstart-portal
+
+- Now test access to access to rabbitm mgmt plugin from outside world.
+	curl http://IP-ADDRESS-OF-AZURE-VM:8080/
+	Default un/pwd: [DELETED]
+
+
+Docker Stuff:
+	- To connect to shell session in running container
+		docker exec -it CONTAINER-ID /bin/bash
+	- To exit shell
+		exit
+	- To find the IP addr of running container
+		docker inspect --format '{{ .NetworkSettings.IPAddress }}' CONTAINER-ID
+	- To see all docker containers
+		docker ps -a
+
+AZURE-VM Details:
+	IP/Host: 52.175.209.90
+	UN: [DELETED]
+	SSH Key: [DELETED]
+	Passphrase for SSH private key: [DELETED]
